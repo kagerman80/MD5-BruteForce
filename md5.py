@@ -9,10 +9,10 @@ def gethash(x):
 
 def findpin(hash):
     for x in range(99999):
-        #print(gethash(x).hexdigest())
         if gethash(x).hexdigest() == hash:
             print("PIN has been found: ", str(x).zfill(5))
-            break
+            return str(x).zfill(5)
         else: continue
 
 findpin("05237ace2c45a84c5de58fec1a099127")
+
